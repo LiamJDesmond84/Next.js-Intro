@@ -7,7 +7,8 @@ function MeetupItem(props) {
     const router = useRouter();
     const { id, image, title, address } = props;
 
-    const showDetails = (id) => {
+    const showDetails = () => {
+        console.log(id)
         router.push(`/${id}`)
     }
 
