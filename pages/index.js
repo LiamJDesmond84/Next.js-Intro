@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import MeetupList from '../components/meetups/MeetupList'
+import MeetupList from '../components/MeetupList'
 // import Image from 'next/image'
 // import styles from '../styles/Home.module.css'
 
@@ -9,7 +9,7 @@ export default function Home() {
     id: "m1",
     title: "San Diego",
     image: "https://imageio.forbes.com/specials-images/dam/imageserve/1120536785/960x0.jpg?fit=bounds&format=jpg&width=960",
-    address: "11234"
+    address: "12345 Booyah St"
   },
   {
     id: "m2",
@@ -27,6 +27,7 @@ export default function Home() {
 
   return (
     <div>
+      
       <MeetupList meetups={DUMMY_MEETUP} />
       <h1>Welcome to Hell</h1>
     </div>
