@@ -1,5 +1,5 @@
 import React from 'react'
-import NewMeetupForm from '../../components/meetups/NewMeetupForm'
+import NewMeetupForm from '../../components/NewMeetupForm'
 
 const NewMeetupPage = () => {
 

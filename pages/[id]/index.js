@@ -1,7 +1,10 @@
 import React from 'react'
+import { useRouter } from 'next/router';
 
 const MeetupDetails = (props) => {
-  const { id } = props;
+
+  const router = useRouter();
+  const { oneMeetup } = props;
   return (
     <div>
       {/* <div>{title}</div> */}
@@ -11,4 +14,18 @@ const MeetupDetails = (props) => {
   )
 }
 
+export async function getStaticProps(context) {
+
+  return {
+    props: {
+      oneMeetup: {
+        id: "",
+        image: "",
+        title: "",
+        address: ""
+
+    }
+  }
+}
+}
 export default MeetupDetails
