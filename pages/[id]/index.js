@@ -1,9 +1,14 @@
 import React from 'react'
 
-const index = () => {
+const MeetupDetails = (props) => {
+  const { id } = props;
   return (
-    <div>index</div>
+    <div>
+      {/* <div>{title}</div> */}
+      {/* <div>{address}</div> */}Shit
+      {/* <img src={image} alt="image" /> */}
+    </div>
   )
 }
 
-export default index
+export default MeetupDetails
