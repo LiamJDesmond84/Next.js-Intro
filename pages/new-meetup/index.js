@@ -1,12 +1,38 @@
 import React from 'react'
 import NewMeetupForm from '../../components/NewMeetupForm'
+import { useRouter } from 'next/router';
+import axios from "axios"
 
 const NewMeetupPage = () => {
+  const router = useRouter();
 
-  const onAddMeetup = (data) => {
-    console.log(data);
+  
+  const onAddMeetup = async (newData) => {
 
+    // can also use axios
+    axios.post("/api/new-meetup", {
+      newData
+    }).then(
+      (res)=>{
+        console.log(res.data);
+        router.push("/");
+    }).catch(
+      (err) => {
+        console.log(err)
+    })
+    // const response = await fetch("/api/new-meetup", {
+    //   method: "POST",
+    //   body: JSON.stringify(newData),
+    //   headers: {
+    //     "Content-Type": "application/json"
+    //   }
+    // });
+
+    // const data = await response.json();
+    
+    // console.log(data);
   }
+  
 
   return (
     <div>
