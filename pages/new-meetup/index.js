@@ -7,11 +7,11 @@ const NewMeetupPage = () => {
   const router = useRouter();
 
   
-  const onAddMeetup = async (newData) => {
+  const onAddMeetup = async (title, image, address, description) => {
 
     // can also use axios
     axios.post("/api/new-meetup", {
-      newData
+      title, image, address, description
     }).then(
       (res)=>{
         console.log(res.data);
